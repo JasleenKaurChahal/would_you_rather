@@ -1,68 +1,50 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# wouldyourather Project
+Udacity React-Redux Evaluation Project
 
-## Available Scripts
+This is my implemnetation of the Would You Rather project as part of the Udacity React Nanodegree Program.
 
-In the project directory, you can run:
+Would You Rather is a web application that allows users to create, vote and view polls as well as their rank in the leaderboard.
 
-### `npm start`
+# Installation
+* install all project dependencies with `npm install`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#Additional Dependencies required to run this project
+npm install react-redux --save
+npm install react-redux-loading --save
+npm install react-router-dom --save
+npm install redux --save
+npm install redux-thunk --save
+npm install semantic-ui-react --save
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+# Start App
+* start the server with `npm start`
 
-### `npm test`
+# App Functionality
+once application start it will  show list of existing users. Once the user select any user from list and log in  it will show home which display unanswered questions and answered questions.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The information about the logged in user appears on the top right of all pages. If someone tries to navigate anywhere by entering the address in the address bar, the user is asked to sign in and then the requested page is shown. The application allows the user to log out and log back in.
 
-### `npm run build`
+Once the user logs in, the user is able to toggle between his/her answered and unanswered polls on the home page, which is located at the root. The polls in both categories are arranged from the most recently created (top) to the least recently created (bottom). The unanswered questions is shown by default.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+What would be the point of seeing answered and unanswered polling questions if we couldn’t actually vote or see the results? Each polling question has a "View Poll" link to the details of that poll. The details of each poll are available at questions/:question_id.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+When a view poll is clicked on the home page, the following is shown:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Text “Would You Rather”;
+Avatar of the user who posted the polling question; and
+Two options.
+For answered polls, each of the two options contains the following:
 
-### `npm run eject`
+Text of the option;
+Number of people who voted for that option; and
+Percentage of people who voted for that option.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The application shows a 404 page if the user is trying to access a url that does not exist. 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Logged in user can create new question using link New Question, it will give 2 option 
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Enter Option1 Text
+or
+Enter Option2 Text
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+The user is able to navigate to the leaderboard, it will show the score and also contains answered questions as well as created question by user. it will show also picture as well as name.
